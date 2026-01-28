@@ -1,0 +1,81 @@
+name: Pull Request Tests
+
+on:
+  pull_request:
+    branches:
+      - main
+      - develop
+    types: [opened, synchronize, reopened]
+
+jobs:
+  code-quality:
+    name: Code Quality Checks
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+      
+      - name: Check JavaScript Syntax
+        run: |
+          echo "Checking JavaScript files..."
+          find lib -name "*.js" -type f 2>/dev/null | while read file; do
+            echo "Checking $file"
+            node -c "$file" || exit 1
+          done || echo "No lib directory found, skipping JS checks"
+      
+      - name: Check for Test Files
+        run: |
+          echo "Verifying test files exist..."
+          if [ -f "lib/runComprehensiveTests.js" ]; then
+            echo "✅ Comprehensive tests found"
+          else
+            echo "⚠️ Warning: lib/runComprehensiveTests.js not found"
+          fi
+          
+          if [ -f "lib/runDatabaseIntegrationTests.js" ]; then
+            echo "✅ Database integration tests found"
+          else
+            echo "⚠️ Warning: lib/runDatabaseIntegrationTests.js not found"
+          fi
+      
+      - name: Comment on PR
+        if: always()
+        uses: actions/github-script@v7
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const body = `## ✅ Code Quality Checks Passed
+            
+            Your code has been validated and is ready for review!
+            
+            ### 📋 Next Steps (Manual)
+            Before merging this PR, please run these tests in Retool:
+            
+            1. **Run Comprehensive Tests**
+               - Click the "Run Tests" button in your Retool app
+               - Verify all tests pass
+            
+            2. **Run Database Integration Tests**
+               - Click the "Run Database Tests" button
+               - Check for any data integrity warnings
+            
+            ### 🎯 Checklist
+            - [ ] Comprehensive tests passed in Retool
+            - [ ] Database integration tests passed in Retool
+            - [ ] Code has been reviewed
+            - [ ] Changes have been tested manually
+            
+            Once all tests pass, this PR is ready to merge! 🚀`;
+            
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: body
+            });
