@@ -803,7 +803,7 @@
             label="Part Number"
             placeholder="Enter value"
             position="center"
-            size={133.5625}
+            size={88.34375}
             summaryAggregationMode="none"
           />
           <Column
@@ -818,7 +818,7 @@
             label="Base Model"
             placeholder="Enter value"
             position="center"
-            size={82.3125}
+            size={82.328125}
             summaryAggregationMode="none"
           />
           <Column
@@ -832,7 +832,7 @@
             label="Description"
             placeholder="Enter value"
             position="center"
-            size={290.625}
+            size={80.609375}
             summaryAggregationMode="none"
           />
           <Column
@@ -845,7 +845,7 @@
             label="Vendor"
             placeholder="Select option"
             position="center"
-            size={56.578125}
+            size={56.59375}
             summaryAggregationMode="none"
             valueOverride="{{ _.startCase(item) }}"
           />
@@ -860,7 +860,7 @@
             label="Additional Details"
             placeholder="Enter value"
             position="center"
-            size={143.5625}
+            size={114.953125}
             summaryAggregationMode="none"
           />
           <Column
@@ -879,7 +879,7 @@
             placeholder="Enter value"
             position="center"
             referenceId="hours_estimate"
-            size={102.265625}
+            size={102.28125}
             summaryAggregationMode="none"
           />
           <Column
@@ -901,7 +901,7 @@
             placeholder="Enter value"
             position="center"
             referenceId="installation_cost"
-            size={105.3125}
+            size={105.328125}
             summaryAggregationMode="none"
             valueOverride="{{ (currentSourceRow.installation_hourly_rate || 0) * (currentSourceRow.hours_estimate || 0) }}"
           />
@@ -962,7 +962,7 @@
             label="Cost"
             placeholder="Enter value"
             position="center"
-            size={79.5}
+            size={42.53125}
             summaryAggregationMode="none"
           >
             <Event
@@ -989,7 +989,7 @@
             label="ID"
             placeholder="Enter value"
             position="center"
-            size={30.75}
+            size={27.796875}
             summaryAggregationMode="none"
           />
           <Column
@@ -1007,7 +1007,7 @@
             label="Gross Profit"
             placeholder="Enter value"
             position="center"
-            size={82.828125}
+            size={82.84375}
             statusIndicatorOptions={{
               manualData: [
                 { showWhen: "{{ item }}", label: "%", color: "", icon: "" },
@@ -1034,7 +1034,7 @@
             label="Sell Price"
             placeholder="Enter value"
             position="center"
-            size={77.625}
+            size={68.34375}
             summaryAggregationMode="none"
             valueOverride="{{ ((currentSourceRow.item_cost || 0) + ((currentSourceRow.installation_hourly_rate || 0) * (currentSourceRow.hours_estimate || 0)) + (currentSourceRow.misc_cost || 0)) * (1 + (currentSourceRow.gp || 0) / 100) }}"
           />
@@ -1063,7 +1063,7 @@
             label="Status"
             placeholder="Select option"
             position="center"
-            size={52.390625}
+            size={52.40625}
             summaryAggregationMode="none"
             valueOverride="{{ _.startCase(item) }}"
           />
