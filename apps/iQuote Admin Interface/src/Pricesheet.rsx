@@ -14,7 +14,6 @@
     isMultiplayerEdited={false}
     notificationDuration={4.5}
     query={include("../lib/getFilteredPricesheet.sql", "string")}
-    resourceDisplayName="retool_db"
     resourceName="4760ca26-4b71-4d97-82f0-120d4d2a03ee"
     resourceTypeOverride=""
     showSuccessToaster={false}
@@ -36,7 +35,6 @@
     isMultiplayerEdited={false}
     notificationDuration={4.5}
     query={include("../lib/bulkUpdateItemGP.sql", "string")}
-    resourceDisplayName="retool_db"
     resourceName="4760ca26-4b71-4d97-82f0-120d4d2a03ee"
     resourceTypeOverride=""
     runWhenModelUpdates={false}
@@ -80,7 +78,6 @@
     isMultiplayerEdited={false}
     notificationDuration={4.5}
     query={include("../lib/getFilteredPricesheetid.sql", "string")}
-    resourceDisplayName="retool_db"
     resourceName="4760ca26-4b71-4d97-82f0-120d4d2a03ee"
     resourceTypeOverride=""
     showSuccessToaster={false}
@@ -91,7 +88,6 @@
     isMultiplayerEdited={false}
     notificationDuration={4.5}
     query={include("../lib/bulkUpdateItemCost.sql", "string")}
-    resourceDisplayName="retool_db"
     resourceName="4760ca26-4b71-4d97-82f0-120d4d2a03ee"
     resourceTypeOverride=""
     runWhenModelUpdates={false}
@@ -125,7 +121,6 @@
     id="pricesheetTableClickActionHandler"
     notificationDuration={4.5}
     query={include("../lib/pricesheetTableClickActionHandler.sql", "string")}
-    resourceDisplayName="retool_db"
     resourceName="4760ca26-4b71-4d97-82f0-120d4d2a03ee"
     resourceTypeOverride=""
     runWhenModelUpdates={false}
@@ -144,7 +139,6 @@
     id="updateHourlyRate"
     isMultiplayerEdited={false}
     query={include("../lib/updateHourlyRate.sql", "string")}
-    resourceDisplayName="retool_db"
     resourceName="4760ca26-4b71-4d97-82f0-120d4d2a03ee"
     resourceTypeOverride=""
     runWhenModelUpdates={false}
@@ -161,7 +155,6 @@
     id="getAdminData"
     notificationDuration={4.5}
     query={include("../lib/getAdminData.sql", "string")}
-    resourceDisplayName="retool_db"
     resourceName="4760ca26-4b71-4d97-82f0-120d4d2a03ee"
     resourceTypeOverride=""
     showSuccessToaster={false}
@@ -203,7 +196,6 @@
     id="query2"
     isMultiplayerEdited={false}
     notificationDuration={4.5}
-    resourceDisplayName="retool_db"
     resourceName="4760ca26-4b71-4d97-82f0-120d4d2a03ee"
     resourceTypeOverride=""
     showSuccessToaster={false}
@@ -220,7 +212,6 @@
     id="debugPartNumber"
     notificationDuration={4.5}
     query={include("../lib/debugPartNumber.sql", "string")}
-    resourceDisplayName="retool_db"
     resourceName="4760ca26-4b71-4d97-82f0-120d4d2a03ee"
     resourceTypeOverride=""
     showSuccessToaster={false}
@@ -241,7 +232,6 @@
       '[{"key":"Authorization","value":"Bearer {{ cloudLinkAccessToken.value }}"},{"key":"Tenant","value":"miltoncat"}]'
     }
     query="v2/quotes/local-items"
-    resourceDisplayName="CloudLink OAuth Token"
     resourceName="b5d41a2e-30ef-4cce-9cb1-c37a545f17a7"
     resourceTypeOverride=""
     runWhenModelUpdates={false}
@@ -304,7 +294,6 @@
   <SqlQueryUnified
     id="submitChangesToAPI"
     _comment="Submit reviewed changes to Internal Admin API with all required fields"
-    resourceDisplayName="retool_db"
     resourceName="4760ca26-4b71-4d97-82f0-120d4d2a03ee"
     resourceTypeOverride=""
   >
@@ -381,7 +370,6 @@
     bodyType="form"
     headers={'[{"key":"Tenant","value":"miltoncat"}]'}
     query="auth/v2/oauth/token"
-    resourceDisplayName="CloudLink OAuth Token"
     resourceName="b5d41a2e-30ef-4cce-9cb1-c37a545f17a7"
     resourceTypeOverride=""
     runWhenModelUpdates={false}
@@ -412,7 +400,6 @@
     }
     isMultiplayerEdited={false}
     query="v2/quotes/local-items"
-    resourceDisplayName="CloudLink OAuth Token"
     resourceName="b5d41a2e-30ef-4cce-9cb1-c37a545f17a7"
     resourceTypeOverride=""
     runWhenModelUpdates={false}
@@ -455,7 +442,6 @@
     bodyType="form"
     headers={'[{"key":"","value":""},{"key":"","value":""}]'}
     query="auth/v2/oauth/token"
-    resourceDisplayName="CloudLink OAuth Token"
     resourceName="b5d41a2e-30ef-4cce-9cb1-c37a545f17a7"
     runWhenModelUpdates={false}
     type="POST"
@@ -595,7 +581,6 @@
       '[{"key":"freight_modifier","value":"1.035"},{"key":"bcp_labor","value":"231"},{"key":"gci_labor","value":"231"},{"key":"measure_up","value":"311"},{"key":"make_up_oil","value":"35"}]'
     }
     notificationDuration={4.5}
-    resourceDisplayName="retool_db"
     resourceName="4760ca26-4b71-4d97-82f0-120d4d2a03ee"
     showSuccessToaster={false}
     tableName="pricing_modifiers"
@@ -653,7 +638,6 @@
   { category: 'Side cutters', size_linkage_description: 'Sidebar Protectors X4 349', part_number: '357-2687', price_after_freight: 1639 },
   { category: 'Side cutters', size_linkage_description: 'Sidebar Protectors X4 374-395', part_number: '329-5956', price_after_freight: 2083 }
 ] }}"
-    resourceDisplayName="retool_db"
     resourceName="4760ca26-4b71-4d97-82f0-120d4d2a03ee"
     showSuccessToaster={false}
     tableName="parts_catalog_reference"

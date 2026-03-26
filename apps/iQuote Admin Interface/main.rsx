@@ -1,6 +1,5 @@
 <App>
   <Include src="./functions.rsx" />
-  <Include src="./src/Pricesheet.rsx" />
   <CustomAppTheme
     id="$appTheme"
     _migrated={true}
@@ -38,8 +37,9 @@
     textLight="#ffffff"
     warning="#dd6b20"
   />
+  <Include src="./src/FileInput.rsx" />
   <Include src="./src/iQuote.rsx" />
   <Include src="./src/OutlookEmailPOC.rsx" />
-  <Include src="./src/FileInput.rsx" />
+  <Include src="./src/Pricesheet.rsx" />
   <Include src="./header.rsx" />
 </App>

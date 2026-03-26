@@ -3,7 +3,8 @@
   "version": "43.0.9",
   "pageUuid": "9c0bb306-f255-11f0-bbcb-d7cb3541c307",
   "appTemplate": {
-    "appThemeId": 179368,
+    "appMaxWidth": "100%",
+    "appThemeId": 179484,
     "pageCodeFolders": {
       "object": {
         "FileInput": {
@@ -22,6 +23,6 @@
     },
     "rootScreen": "Pricesheet",
     "appThemeName": "MiltonCat",
-    "version": "3.327.0"
+    "version": "3.361.0"
   }
 }
